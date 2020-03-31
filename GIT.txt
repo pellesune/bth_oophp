@@ -1,0 +1,10 @@
+git add .  (denna går på allt, man kan styra mer spec)
+git commit -a -m "MEDDELANDE"
+git tag -a v1.0.0 -m "Ett meddelande för denna taggen" (ändra version och meddelande)
+git push
+git push --tags
+
+
+Vid problem vid körning "git push --tags" kör denna istället -> "git push -f --tags" (force)
+! [rejected]        v2.0.0 -> v2.0.0 (already exists)
+error: failed to push some refs to 'git@github.com:pellesune/bth_design.git'
