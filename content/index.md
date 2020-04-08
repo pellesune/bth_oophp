@@ -4,24 +4,24 @@ title: "Min fina titel"
 Min me-sida i kursen oophp
 =========================
 
-Detta innehåll är skrivet i markdown och du hittar innehållet i filen `content/index.md`.
+<article>
+[FIGURE src="image/Kapten_Skagg.png?widht=200&height=200" class="right" caption="Bild på Kapten Skägg"]
 
-[FIGURE src="image/me.jpg?w=400&a=4,27,11,0&cf&sharpen" class="right" caption="Bild på mig, ätandes glass och hållandes ett kort på någon jultillställning."]
+<p>Jag är uppvuxen i Stockholm och har varit staden trogen hela mitt liv.
+Jag livnär mig inom IT-sektorn där jag har verkat över 30 år. På min fritid
+studerar jag, reser och umgås med mina vänner (just nu pause...). Jag fastnar med jämna
+mellanrum på något och just nu är det ölbryggning.</p>
 
-Detta är min me-sida i kursen. Denna sidan innehåller en presentation av mig själv. Underhåll denna sidan under hela kursen och uppdatera den efter hand och behov.
+<p>Målet med att gå detta kursprogam är att bredda min kunskap men även att
+fortsätta utmana mig själv. Tidigare har jag läst Java, XML, Javascript och
+T-sql. Kommer att bli spännande att läsa kursen oophp.</p>
 
-Så, en presentation en bra början. Skriv några ord om dig själv. Jag börjar.
+<p>En dröm jag har är att öppna en pub. Jag är förutom öl även fascinerad av
+skägg och jag själv går regelbundet till barberare. Därför tänker jag att om
+mina gäster förutom att kunna dricka en egentillverkad öl, även skulle
+kombinera sitt pubbesök med att möjligheten att få skägget fixat vore
+häftigt. Detta härliga ställe där man både kan dricka en god öl och fixa
+skägget ligger givetvis på mysiga Kungsholmen i Stockholm.</p>
 
-Mitt namn är Mikael Roos. Född och uppvuxen i Bankeryd, Småland, strax utanför Jönköping, i ett villaområde som byggdes upp samtidigt som vi flyttade in där. Jag gillade landhockey och har spelat bandy och hockey samt gått bowlinggymnasiet i Nässjö. Jag har varit städare, diskare, kallskänka, servitör och kock. På ett bananskal landade jag i Ronneby när jag började högskolan 1990 där och nu är jag kvar med fru, barn och så vidare.
-
-Programmering har alltid intresserat mig sedan 13-årsåldern och min första dator var en Spectravideo 328 med bandspelare.
-
-Om jag skall nämna någon hobby, förutom webbprogrammering, så får det bli att bära sten på sommarstugetomten, och det finns sten så det räcker och blir över.
-
-Till och från får jag för mig att börja på lite hobbies, ett år satsade jag på pokerspel, ett annat år var det geocaching, sedan turfing och nu på sistone verkar släktforskning lite spännande. Annars kan jag alltid koda på något av mina opensource-projekt, det finns och blir över.
-
-Vill du läsa mer om vad jag jobbat med så kan du kika på min [Linkedin-profil](https://www.linkedin.com/in/pt90mr/).
-
-Vi syns och hörs i forum och chatt!
-
-/Mikael
+<p>/Kapten Skägg</p>
+</article>
