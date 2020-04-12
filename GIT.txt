@@ -10,6 +10,20 @@ Vid problem vid körning "git push --tags" kör denna istället -> "git push -f 
 error: failed to push some refs to 'git@github.com:pellesune/bth_design.git'
 
 
+20200412
+git add .
+git commit -a -m "Initial commit for kmom02"
+git tag -a v2.0.0 -m "Initial commit for kmom02"
+git push
+git push --tags
+
+20200408
+git add .
+git commit -a -m "Redovisningstext"
+git tag -a v1.0.3 -m "Redovisningstext"
+git push
+git push --tags
+
 20200408
 git add .
 git commit -a -m "Bygg en me-sida för oophp med ramverket Anax"
