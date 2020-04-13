@@ -9,6 +9,12 @@ Vid problem vid körning "git push --tags" kör denna istället -> "git push -f 
 ! [rejected]        v2.0.0 -> v2.0.0 (already exists)
 error: failed to push some refs to 'git@github.com:pellesune/bth_design.git'
 
+20200413
+git add .
+git commit -a -m "Efter - Flytta spelet Gissa mitt nummer till me-sidan"
+git tag -a v2.0.1 -m "Efter - Flytta spelet Gissa mitt nummer till me-sidan"
+git push
+git push --tags
 
 20200412
 git add .
