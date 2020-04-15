@@ -11,6 +11,13 @@ error: failed to push some refs to 'git@github.com:pellesune/bth_design.git'
 
 20200415
 git add .
+git commit -a -m "Released with kmom02 for oophp-course"
+git tag -a v2.0.3 -m "Released with kmom02 for oophp-course"
+git push
+git push --tags
+
+20200415
+git add .
 git commit -a -m "Efter - Dokumentera PHP med phpdoc och phpDocumentor"
 git tag -a v2.0.2 -m "Efter - Dokumentera PHP med phpdoc och phpDocumentor"
 git push
