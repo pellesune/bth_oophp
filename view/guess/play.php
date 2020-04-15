@@ -1,6 +1,6 @@
 <?php
 
-namespace Anax\View;
+namespace Roju19\Guess;
 
 /**
  * Render content within an article.
@@ -8,8 +8,6 @@ namespace Anax\View;
 
 // Show incoming variables and view helper functions
 //echo showEnvironment(get_defined_vars(), get_defined_functions());
-
-
 
 ?><h1>Guess my number (POST)</h1>
 
@@ -23,7 +21,6 @@ namespace Anax\View;
     <input type="submit" name="doInit" value="Start from beginning">
     <input type="submit" name="doCheat" value="Cheat">
 </form>
-
 
 <?php if ($doGuess) : ?>
     <p>Your guess <?= $guess ?> is <b><?= $res ?></b>.</p>

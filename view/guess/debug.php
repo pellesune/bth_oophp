@@ -1,6 +1,6 @@
 <?php
 
-namespace Anax\View;
+namespace Roju19\Guess;
 
 /**
  * Render content within an article.
@@ -8,8 +8,6 @@ namespace Anax\View;
 
 // Show incoming variables and view helper functions
 //echo showEnvironment(get_defined_vars(), get_defined_functions());
-
-
 
 ?><hr>
 <pre>

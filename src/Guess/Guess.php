@@ -3,17 +3,15 @@
 namespace Roju19\Guess;
 
 /**
+ * This is a summary
  * Guess my number, a class supporting the game through GET, POST and SESSION.
  */
 class Guess
 {
-    /**
-     * @var int $number   The current secret number.
-     * @var int $tries    Number of tries a guess has been made.
-     */
+    /** @var int $number   The current secret number. */
     private $number;
+    /** @var int $tries    Number of tries a guess has been made.  */
     private $tries;
-
 
     /**
      * Constructor to initiate the object with current game settings,
@@ -77,7 +75,7 @@ class Guess
      * Make a guess, decrease remaining guesses and return a string stating
      * if the guess was correct, too low or to high or if no guesses remains.
      *
-     * @param int $geuss the guesses number
+     * @param int $guess the guesses number
      *
      * @throws GuessException when guessed number is out of bounds.
      *
