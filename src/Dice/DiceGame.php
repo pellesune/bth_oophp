@@ -14,12 +14,16 @@ class DiceGame
      * @var int       $currentPlayer  The current player number
      * @var array     $diceScorecard  Stores the all DiceHand values
      * @var string    $names          The current player name
+     * @var string    $histogram      The
+     * @var string    $diceHistogram  The
      */
     private $dices;
     private $players;
     private $currentPlayer;
     private $diceScorecard;
     private $names;
+    // private $histogram;
+    // private $diceHistogram;
 
     /**
      * Constructor to create a diceHand.
@@ -105,6 +109,7 @@ class DiceGame
             $this->diceScorecard[] = $value;
         }
     }
+
 
     /**
      * Get the score of the rounds.

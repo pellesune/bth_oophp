@@ -94,5 +94,10 @@ return [
             "url" => "dice100",
             "title" => "Tärningsspelet 100",
         ],
+        [
+            "text" => "Dice 100 controller",
+            "url" => "dice2/init",
+            "title" => "Tärningsspelet 100 controller",
+        ],
     ],
 ];

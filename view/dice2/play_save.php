@@ -5,59 +5,32 @@ namespace Roju19\Dice;
 /**
  * debug
  */
-// var_dump($game);
 // var_dump($currRoll);
+// var_dump($game);
+// var_dump($player);
 
-/**
- * Init and re:start the dice game
- */
-if (isset($_POST["doInit"])) {
-    $_SESSION = [];
-    $_POST = [];
+// if ($game->diceScorecard() != null){
+//     if (in_array("1", $game->diceScorecard())) {
+//         $currRoll = "It was at least one dice in last roll: " .
+//             implode(", ", $game->getPlayers()[$game->currentPlayer()]->values());
+//     } else {
+//         $currRoll = "Dices: " .
+//             implode(", ", $game->getPlayers()[$game->currentPlayer()]->values()) .
+//             "<br>" . "Score this round: " . array_sum($game->diceScorecard()) . "<br>";
+//     }
+//
+//     if ($game->currentPlayer() == 1) {
+//         $game->playComputerTurn();
+//     } else {
+//         if (!in_array(1, $game->diceScorecard())) {
+//             ;
+//         } else {
+//             $game->changeCurrentPlayer();
+//         }
+//     }
+// }
 
-    session_destroy();
-    $game = new \Roju19\Dice\DiceGame();
-}
-
-/**
- * Play the dice game and roll the dices
- */
-if (isset($_POST["doRoll"])) {
-    $game->getPlayers()[$game->currentPlayer()]->roll();
-    $game->addToScorecard($game->getPlayers()[$game->currentPlayer()]->values());
-
-    if (in_array("1", $game->diceScorecard())) {
-        $currRoll = "It was at least one dice in last roll: " .
-            implode(", ", $game->getPlayers()[$game->currentPlayer()]->values());
-    } else {
-        $currRoll = "Dices: " .
-            implode(", ", $game->getPlayers()[$game->currentPlayer()]->values()) .
-            "<br>" . "Score this round: " . array_sum($game->diceScorecard()) . "<br>";
-    }
-
-
-    if ($game->currentPlayer() == 1) {
-        $game->playComputerTurn();
-    } else {
-        if (!in_array(1, $game->diceScorecard())) {
-            ;
-        } else {
-            $game->changeCurrentPlayer();
-        }
-    }
-}
-
-
-/**
- * Save the results to diceScorecard and change player
- */
-if (isset($_POST["doSave"])) {
-    $game->getPlayers()[$game->currentPlayer()]->setPoints($game->diceScorecard());
-    $game->changeCurrentPlayer();
-    $game->isDone();
-}
-
-?><h1>Dice 100</h1>
+?><h1>Dice 100 controller</h1>
     <ul>
     <?php for ($i=0; $i < count($game->getNames()); $i++) { ?>
               <li><b><?= $game->getNames()[$i] ?></b> <?= $game->getPlayers()[$i]->points() ?></li>

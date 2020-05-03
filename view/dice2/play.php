@@ -5,59 +5,52 @@ namespace Roju19\Dice;
 /**
  * debug
  */
-// var_dump($game);
 // var_dump($currRoll);
-
-/**
- * Init and re:start the dice game
- */
-if (isset($_POST["doInit"])) {
-    $_SESSION = [];
-    $_POST = [];
-
-    session_destroy();
-    $game = new \Roju19\Dice\DiceGame();
-}
-
-/**
- * Play the dice game and roll the dices
- */
-if (isset($_POST["doRoll"])) {
-    $game->getPlayers()[$game->currentPlayer()]->roll();
-    $game->addToScorecard($game->getPlayers()[$game->currentPlayer()]->values());
-
-    if (in_array("1", $game->diceScorecard())) {
-        $currRoll = "It was at least one dice in last roll: " .
-            implode(", ", $game->getPlayers()[$game->currentPlayer()]->values());
-    } else {
-        $currRoll = "Dices: " .
-            implode(", ", $game->getPlayers()[$game->currentPlayer()]->values()) .
-            "<br>" . "Score this round: " . array_sum($game->diceScorecard()) . "<br>";
-    }
-
-
-    if ($game->currentPlayer() == 1) {
-        $game->playComputerTurn();
-    } else {
-        if (!in_array(1, $game->diceScorecard())) {
-            ;
-        } else {
-            $game->changeCurrentPlayer();
-        }
-    }
-}
+// var_dump($game);
+// var_dump($player);
 
 
 /**
- * Save the results to diceScorecard and change player
+ * Show off a histogram.
  */
-if (isset($_POST["doSave"])) {
-    $game->getPlayers()[$game->currentPlayer()]->setPoints($game->diceScorecard());
-    $game->changeCurrentPlayer();
-    $game->isDone();
-}
+// include(__DIR__ . "/config.php");
+// include(__DIR__ . "/autoload_namespace.php");
 
-?><h1>Dice 100</h1>
+
+// $rolls = $_GET["rolls"] ?? 6;
+//
+// $robert = new DiceHistogram2();
+// $robert->getHistogramSerie();
+// $histogram = new Histogram();
+// $histogram->injectData($robert);
+
+// var_dump($session);
+// var_dump($historygram);
+//
+// for ($i = 0; $i < $rolls; $i++) {
+//     $dice->diceRandom();
+// }
+
+// $histogram = $game->getHistogram();
+// $histogram->injectData($dice);
+
+// $rolls = $_GET["rolls"] ?? 6;
+
+// $dice = new DiceHistogram2();
+
+// for ($i = 0; $i < $rolls; $i++) {
+    // $dice->roll();
+// }
+// $histogram = $game->getHistogram();
+
+// $dice = new DiceHistogram();
+// $dice->roll();
+// var_dump($game);
+// var_dump($diceHistogram);
+// var_dump($histogram);
+// var_dump($this->serie);
+
+?><h1>Dice 100 controller</h1>
     <ul>
     <?php for ($i=0; $i < count($game->getNames()); $i++) { ?>
               <li><b><?= $game->getNames()[$i] ?></b> <?= $game->getPlayers()[$i]->points() ?></li>
@@ -90,3 +83,4 @@ if (isset($_POST["doSave"])) {
                 <input type="submit" name="doInit" value="Start from beginning" style="float: center;" />
         </form>
     <?php } ?>
+<pre><?= $histogram->getAsText() ?></pre>
