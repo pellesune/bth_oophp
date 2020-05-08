@@ -133,15 +133,27 @@ class DiceGame
 
     /**
      * Play the Computers turn.
-     * Save after one only roll.
+     * Save / change player, if sum of hand is equal or higher then 14 OR
+     * average of hand is higher then 3.5
      *
      * @return void
      */
     public function playComputerTurn()
     {
-        $this->getPlayers()[1]->setPoints($this->diceScorecard());
-        $this->changeCurrentPlayer();
-        $this->isDone();
+        $sum = array_sum($this->diceScorecard);
+        // var_dump($sum);
+        $ave = $sum / sizeof($this->diceScorecard);
+        // var_dump($ave);
+
+        if ($sum >= 14 || $ave >= 3.5) {
+            $this->getPlayers()[1]->setPoints($this->diceScorecard());
+            $this->changeCurrentPlayer();
+            $this->isDone();
+        } else {
+            $this->getPlayers()[1]->setPoints($this->diceScorecard());
+            // $this->changeCurrentPlayer();
+            $this->isDone();
+        }
     }
 
     /**

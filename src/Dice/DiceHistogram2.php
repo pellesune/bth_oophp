@@ -18,7 +18,9 @@ class DiceHistogram2 extends Dice implements HistogramInterface
      */
     public function setSerie($values)
     {
-        for ($i = 0; $i < count($values); $i++) {
+        $size = count($values);
+        for ($i = 0; $i < $size; $i++) {
+        // for ($i = 0; $i < count($values); $i++) {
             $this->serie[] = $values[$i];
         }
     }
@@ -29,18 +31,18 @@ class DiceHistogram2 extends Dice implements HistogramInterface
      *
      * @return int with the max value.
      */
-    public function getHistogramMax()
-    {
-        return max($this->serie);
-    }
+    // public function getHistogramMax()
+    // {
+    //     return max($this->serie);
+    // }
 
     /**
      * Get min value for the histogram.
      *
      * @return int with the min value.
      */
-    public function getHistogramMin()
-    {
-        return min($this->serie);
-    }
+    // public function getHistogramMin()
+    // {
+    //     return min($this->serie);
+    // }
 }

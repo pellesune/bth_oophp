@@ -9,13 +9,19 @@ Vid problem vid körning "git push --tags" kör denna istället -> "git push -f 
 ! [rejected]        v2.0.0 -> v2.0.0 (already exists)
 error: failed to push some refs to 'git@github.com:pellesune/bth_design.git'
 
+20200508
+git add .
+git commit -a -m "Release Candidate 1 (kmom04 ) for oophp-course"
+git tag -a v4.0.1 -m "Release Candidate 1 (kmom04 ) for oophp-course"
+git push
+git push --tags
+
 20200503
 git add .
 git commit -a -m "First version of Krav 1 and 2 (kmom04 )for oophp-course"
 git tag -a v4.0.1 -m "First version of Krav 1 and 2 (kmom04 )for oophp-course"
 git push
 git push --tags
-
 
 20200502
 git add .

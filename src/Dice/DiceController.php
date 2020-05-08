@@ -39,6 +39,23 @@ class DiceController implements AppInjectableInterface
     }
 
 
+
+    /**
+     * This is the index method action, it handles:
+     * ANY METHOD mountpoint
+     * ANY METHOD mountpoint/
+     * ANY METHOD mountpoint/index
+     *
+     * @return string
+     */
+    // public function indexAction() : string
+    public function debugAction() : string
+    {
+        // Deal with the action and return a response.
+        // return __METHOD__ . ", \$db is {$this->db}";
+        return "Debug my game!!";
+    }
+
     /**
      * This is the index method action, it handles:
      * ANY METHOD mountpoint
@@ -57,7 +74,6 @@ class DiceController implements AppInjectableInterface
         // Init the session for the gamestart.
         $session->destroy();
         // $currRoll = "";
-
         return $response ->redirect("dice2/play");
     }
 
@@ -85,8 +101,6 @@ class DiceController implements AppInjectableInterface
         $game = $session->get("game");
         $player = ($game->currentPlayer() == 0) ? "Player's " : "Computer's ";
 
-        // $dice = new DiceHistogram();
-
         $session->set("diceHistogram", ($session->has("diceHistogram") ? $session->get("diceHistogram") : new DiceHistogram2()));
         $diceHistogram = $session->get("diceHistogram");
 
@@ -97,24 +111,41 @@ class DiceController implements AppInjectableInterface
 
         if ($game->diceScorecard() != null) {
             if (in_array("1", $game->diceScorecard())) {
-                $currRoll = $session->get("currRoll", "It was at least one dice in last roll: "
+                $currRoll = $session->get("currRoll", "At least one of the dice shows one in last roll: "
                     . implode(", ", $game->getPlayers()[$game->currentPlayer()]->values()));
+                $game->changeCurrentPlayer();
             } else {
                 $currRoll = $session->get("currRoll", "Dices: "
                     . implode(", ", $game->getPlayers()[$game->currentPlayer()]->values())
                     . "<br>" . "Score this round: "
-                    . array_sum($game->diceScorecard()) . "<br>");
-            }
-
-            if ($game->currentPlayer() == 1) {
-                $game->playComputerTurn();
-            } else {
-                if (!in_array(1, $game->diceScorecard())) {
-                    ;
-                } else {
-                    $game->changeCurrentPlayer();
+                    . array_sum($game->diceScorecard())
+                    . "<br>" . "Average this round: "
+                    . round(array_sum($game->diceScorecard()) / sizeof($game->diceScorecard()), 2)
+                    . "<br>");
+                if ($game->currentPlayer() == 1) {
+                        $game->playComputerTurn();
                 }
             }
+
+            // if (($game->currentPlayer() == 1) && (in_array("1", $game->diceScorecard()))) {
+            //     $game->playComputerTurn();
+            // }
+
+
+
+            // if ($game->currentPlayer() == 1) {
+            //     if (in_array("1", $game->diceScorecard())) {
+            //         $game->changeCurrentPlayer();
+            //     } else {
+            //         $game->playComputerTurn();
+            //     }
+            // } else {
+            //     if (!in_array(1, $game->diceScorecard())) {
+            //         ;
+            //     } else {
+            //         $game->changeCurrentPlayer();
+            //     }
+            // }
         }
 
         $data = [
@@ -179,22 +210,5 @@ class DiceController implements AppInjectableInterface
         }
 
         return $response->redirect("dice2/play");
-    }
-
-
-    /**
-     * This is the index method action, it handles:
-     * ANY METHOD mountpoint
-     * ANY METHOD mountpoint/
-     * ANY METHOD mountpoint/index
-     *
-     * @return string
-     */
-    // public function indexAction() : string
-    public function debugAction() : string
-    {
-        // Deal with the action and return a response.
-        // return __METHOD__ . ", \$db is {$this->db}";
-        return "Debug my game!!";
     }
 }

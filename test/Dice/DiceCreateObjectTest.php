@@ -9,6 +9,8 @@ use PHPUnit\Framework\TestCase;
  */
 class DiceCreateObjectTest extends TestCase
 {
+
+
     /**
      * Construct object and verify that the object has the expected
      * properties. Use no arguments.
@@ -18,6 +20,7 @@ class DiceCreateObjectTest extends TestCase
         $dice = new Dice();
         $this->assertInstanceOf("\Roju19\Dice\Dice", $dice);
     }
+
 
     /**
      * Construct object and verify that the object and Method roll()
@@ -33,6 +36,7 @@ class DiceCreateObjectTest extends TestCase
         $this->assertTrue($res<=$high);
         $this->assertTrue($res>=$low);
     }
+
 
     /**
      * Construct object and verify that the object and Method getLastRoll()

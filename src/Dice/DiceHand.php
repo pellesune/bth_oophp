@@ -42,7 +42,9 @@ class DiceHand
      */
     public function roll()
     {
-        for ($i=0; $i < sizeof($this->values); $i++) {
+        $size = sizeof($this->values);
+        for ($i=0; $i < $size; $i++) {
+        // for ($i=0; $i < sizeof($this->values); $i++) {
         // for ($i=0; $i < count($this->values); $i++) {
             $this->values[$i] = $this->dices[$i]->roll();
         }

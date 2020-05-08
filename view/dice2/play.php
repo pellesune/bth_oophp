@@ -78,7 +78,7 @@ namespace Roju19\Dice;
                             <?php } ?>
                         <?php } ?>
                 <?php } else { ?>
-                    <input type="submit" name="doRoll" value="<?= $game->getNames()[1] ?> roll" style="float: left;">
+                  <input type="submit" name="doRoll" value="<?= $game->getNames()[1] ?> roll" style="float: left;">
                 <?php } ?>
                 <input type="submit" name="doInit" value="Start from beginning" style="float: center;" />
         </form>
