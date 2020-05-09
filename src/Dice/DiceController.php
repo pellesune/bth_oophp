@@ -41,7 +41,7 @@ class DiceController implements AppInjectableInterface
 
 
     /**
-     * This is the index method action, it handles:
+     * This is the debug method action, it handles:
      * ANY METHOD mountpoint
      * ANY METHOD mountpoint/
      * ANY METHOD mountpoint/index
@@ -57,7 +57,7 @@ class DiceController implements AppInjectableInterface
     }
 
     /**
-     * This is the index method action, it handles:
+     * This is the init method action, it handles:
      * ANY METHOD mountpoint
      * ANY METHOD mountpoint/
      * ANY METHOD mountpoint/index
@@ -79,7 +79,7 @@ class DiceController implements AppInjectableInterface
 
 
     /**
-     * This is the index method action, it handles:
+     * This is the play action method action, it handles:
      * ANY METHOD mountpoint
      * ANY METHOD mountpoint/
      * ANY METHOD mountpoint/index
@@ -126,26 +126,6 @@ class DiceController implements AppInjectableInterface
                         $game->playComputerTurn();
                 }
             }
-
-            // if (($game->currentPlayer() == 1) && (in_array("1", $game->diceScorecard()))) {
-            //     $game->playComputerTurn();
-            // }
-
-
-
-            // if ($game->currentPlayer() == 1) {
-            //     if (in_array("1", $game->diceScorecard())) {
-            //         $game->changeCurrentPlayer();
-            //     } else {
-            //         $game->playComputerTurn();
-            //     }
-            // } else {
-            //     if (!in_array(1, $game->diceScorecard())) {
-            //         ;
-            //     } else {
-            //         $game->changeCurrentPlayer();
-            //     }
-            // }
         }
 
         $data = [
@@ -165,7 +145,7 @@ class DiceController implements AppInjectableInterface
 
 
     /**
-     * This is the index method action, it handles:
+     * This is the plat action post method action, it handles:
      * ANY METHOD mountpoint
      * ANY METHOD mountpoint/
      * ANY METHOD mountpoint/index

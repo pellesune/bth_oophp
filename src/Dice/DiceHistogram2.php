@@ -24,25 +24,4 @@ class DiceHistogram2 extends Dice implements HistogramInterface
             $this->serie[] = $values[$i];
         }
     }
-
-
-    /**
-     * Get max value for the histogram.
-     *
-     * @return int with the max value.
-     */
-    // public function getHistogramMax()
-    // {
-    //     return max($this->serie);
-    // }
-
-    /**
-     * Get min value for the histogram.
-     *
-     * @return int with the min value.
-     */
-    // public function getHistogramMin()
-    // {
-    //     return min($this->serie);
-    // }
 }

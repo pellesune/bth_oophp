@@ -38,22 +38,8 @@ class Histogram
         sort($this->serie);
         $counts = array_count_values($this->serie);
 
-        // $min = 1;
-        // $max = 6;
-        // $min = $this->min;
-        // $max = $this->max;
-
         for ($i = $this->min; $i <= $this->max; $i++) {
-            // if ($min == null && $max == null) {
-            //     if (isset($counts[$i])) {
-            //         $string = "";
-            //         for ($j = 0; $j < $counts[$i]; $j++) {
-            //             $string = $string . "*";
-            //         }
-            //         echo $i . ": " . $string . "<br />";
-            //     }
-            // } else {
-                $string = "";
+            $string = "";
             if (isset($counts[$i])) {
                 if ($i >= $this->min && $i <= $this->max) {
                     for ($j = 0; $j < $counts[$i]; $j++) {
