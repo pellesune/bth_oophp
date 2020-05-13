@@ -3,7 +3,7 @@
 /**
  * Show all movies.
  */
-$app->router->get("movie", function () use ($app) {
+$app->router->get("routermovie", function () use ($app) {
     // return "Hello Movie";
     // $title = "Show all movies";
     // $view[] = "view/show-all.php";
@@ -17,7 +17,7 @@ $app->router->get("movie", function () use ($app) {
     $sql = "SELECT * FROM movie;";
     $res = $app->db->executeFetchAll($sql);
 
-    $app->page->add("movie/index", [
+    $app->page->add("routermovie/index", [
         "resultset" => $res,
     ]);
 
@@ -37,6 +37,6 @@ $app->router->get("movie", function () use ($app) {
     //
     // $data["resultset"] = $res;
     //
-    // $app->page->add("movie/index", $data);
+    // $app->page->add("movie/index_exempel", $data);
     // $app->page->render($data);
 // });

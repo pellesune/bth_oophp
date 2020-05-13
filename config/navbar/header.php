@@ -98,5 +98,15 @@ return [
             "url" => "dice2/init",
             "title" => "Tärningsspelet 100 controller",
         ],
+        [
+            "text" => "Movie database router",
+            "url" => "routermovie",
+            "title" => "Movie database router",
+        ],
+        [
+            "text" => "Movie database controller",
+            "url" => "movie",
+            "title" => "Movie database controller",
+        ],
     ],
 ];
