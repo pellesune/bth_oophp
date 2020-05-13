@@ -27,7 +27,8 @@ namespace Roju19\Movie;
         <th></th>
         <th></th>
     </tr>
-<?php $id = -1; foreach ($res as $row) : $id++; ?>
+<?php $id = -1; foreach ($res as $row) :
+    $id++; ?>
     <tr>
         <td><?= $id ?></td>
         <td><?= $row->id ?></td>

@@ -1,7 +1,6 @@
 <?php
 
 namespace Roju19\Movie;
-// namespace Roju19\Dice;
 
 use Anax\Commons\AppInjectableInterface;
 use Anax\Commons\AppInjectableTrait;
@@ -19,8 +18,9 @@ use Anax\Commons\AppInjectableTrait;
  *
  * @SuppressWarnings(PHPMD.TooManyPublicMethods)
  */
- class MovieController implements AppInjectableInterface
- {
+
+class MovieController implements AppInjectableInterface
+{
     use AppInjectableTrait;
 
     /**
@@ -80,7 +80,6 @@ use Anax\Commons\AppInjectableTrait;
             $session->set("id", $request->getPost("id"));
             return $response->redirect("movie/delete");
         } else if ($reset) {
-            // $session->set("id", $request->getPost("id"));
             return $response->redirect("movie/reset");
         }
     }
@@ -116,11 +115,11 @@ use Anax\Commons\AppInjectableTrait;
 
         if (empty($image)) {
             $image = "img/noimage.png";
-         }
+        }
 
-         $db->execute($sql, [$title, $year, $image]);
+        $db->execute($sql, [$title, $year, $image]);
 
-         return $response->redirect("movie");
+        return $response->redirect("movie");
     }
 
     public function editActionGet() : object
@@ -135,7 +134,7 @@ use Anax\Commons\AppInjectableTrait;
         $sql = "SELECT id, title, year, image FROM movie WHERE id LIKE ?";
 
         $id = $session->get("id");
-        // var_dump($sql);
+        // var_dump($session);
 
         $data["res"] = $db->executeFetchAll($sql, [$id]);
         $data["title"] = "Editera film";
@@ -143,29 +142,27 @@ use Anax\Commons\AppInjectableTrait;
         $page->add("movie/edit", $data);
 
         return $page->render($data);
-     }
+    }
 
-     public function editActionPost() : object
-     {
+    public function editActionPost() : object
+    {
         $request = $this->app->request;
         $response = $this->app->response;
         // $session = $this->app->session;
         // $page = $this->app->page;
         $db = $this->app->db;
 
-        // $edit = $request->getPost("edit");
         $db->connect();
         $sql = "UPDATE movie SET title = ?, year = ? WHERE id = ?";
 
         $title = $request->getPost("title");
         $year = $request->getPost("year");
         $id = $request->getPost("id");
-         // var_dump($sql);
 
-         $db->execute($sql, [$title, $year, $id]);
+        $db->execute($sql, [$title, $year, $id]);
 
-         return $response->redirect("movie");
-     }
+        return $response->redirect("movie");
+    }
 
     public function deleteActionGet() : object
     {
@@ -213,15 +210,9 @@ use Anax\Commons\AppInjectableTrait;
     {
         // $request = $this->app->request;
         // $response = $this->app->response;
-        $session = $this->app->session;
+        // $session = $this->app->session;
         $page = $this->app->page;
-        // $db = $this->app->db;
 
-        // $db->connect();
-        // $id = $session->get("id");
-        // $sql = "SELECT id, title, year, image FROM movie WHERE id LIKE ?";
-
-        // $data["res"] = $db->executeFetchAll($sql, [$id]);
         $data["title"] = "Återskapa film databa";
 
         $page->add("movie/reset", $data);
@@ -238,7 +229,6 @@ use Anax\Commons\AppInjectableTrait;
         $db = $this->app->db;
 
         $db->connect();
-        // $id = $request->getPost("id");
         $reset = $request->getPost("reset");
 
         // var_dump($request);
