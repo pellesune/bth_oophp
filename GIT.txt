@@ -11,6 +11,13 @@ error: failed to push some refs to 'git@github.com:pellesune/bth_design.git'
 
 20200517
 git add .
+git commit -a -m "Added Textfilter U1 (kmom06 ) for oophp-course"
+git tag -a v6.0.1 -m "Added Textfilter U1 (kmom06 ) for oophp-course"
+git push
+git push --tags
+
+20200517
+git add .
 git commit -a -m "Initial commit for kmom06 for oophp-course"
 git tag -a v6.0.0 -m "Initial commit for kmom06 for oophp-course"
 git push

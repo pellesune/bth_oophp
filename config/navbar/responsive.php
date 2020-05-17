@@ -109,5 +109,10 @@ return [
             "url" => "movie",
             "title" => "Movie database controller",
         ],
+        [
+            "text" => "Textfilter controller",
+            "url" => "textfilter",
+            "title" => "Textfilter controller",
+        ],
     ],
 ];
