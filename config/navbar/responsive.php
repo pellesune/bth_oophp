@@ -114,5 +114,10 @@ return [
             "url" => "textfilter",
             "title" => "Textfilter controller",
         ],
+        [
+            "text" => "Blog controller",
+            "url" => "blog",
+            "title" => "Blog controller",
+        ],
     ],
 ];

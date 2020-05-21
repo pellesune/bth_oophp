@@ -40,8 +40,10 @@ class MyTextFilter
     public function parse($text, $filter)
     {
         foreach ($filter as $value) {
-            $function = $this->filters[$value];
-            $text = $this->$function($text);
+            if (!$value == "") {
+                $function = $this->filters[$value];
+                $text = $this->$function($text);
+            }
         }
         return $text;
     }

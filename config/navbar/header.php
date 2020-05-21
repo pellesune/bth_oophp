@@ -113,5 +113,34 @@ return [
             "url" => "textfilter",
             "title" => "Textfilter controller",
         ],
+        [
+            "text" => "Blog controller",
+            "url" => "blog",
+            "title" => "Blog controller",
+            "submenu" => [
+                "items" => [
+                    [
+                        "text" => "Show all content",
+                        "url" => "blog/index",
+                        "title" => "Show all content",
+                      ],
+                    [
+                        "text" => "Admin",
+                        "url" => "blog/admin",
+                        "title" => "Admin",
+                    ],
+                    [
+                        "text" => "Pages",
+                        "url" => "blog/pages",
+                        "title" => "Pages",
+                    ],
+                    [
+                        "text" => "Blog post",
+                        "url" => "blog/blogpost",
+                        "title" => "Blog post",
+                    ],
+                ],
+            ],
+        ],
     ],
 ];
