@@ -11,8 +11,15 @@ error: failed to push some refs to 'git@github.com:pellesune/bth_design.git'
 
 20200521
 git add .
+git commit -a -m "Fixed student server issue, Released with fixed textfilter and Blog (kmom06) for oophp-course"
+git tag -a v6.0.3 -m "Fixed student server issue, Released with fixed textfilter and Blog (kmom06) for oophp-cours"
+git push
+git push --tags
+
+20200521
+git add .
 git commit -a -m "Released with fixed textfilter and Blog (kmom06) for oophp-course"
-git tag -a v6.0.2 -m "Released with fixed textfilter and Blog (kmom06) for oophp-course""
+git tag -a v6.0.2 -m "Released with fixed textfilter and Blog (kmom06) for oophp-course"
 git push
 git push --tags
 

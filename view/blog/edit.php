@@ -23,8 +23,9 @@ if (!$res) {
     <p>
         <label>Path:<br>
             <?php if (isset($value->error)) { ?>
-                <input type="text" name="path" value="<?= htmlentities($value->path) ?>"/><?php if ($value->pathCheck > 0) { ?><b><?= " * Path " . $value->error ?></b>
-                                                        <?php } ?>
+                <input type="text" name="path" value="<?= htmlentities($value->path) ?>"/>
+                <?php if ($value->pathCheck > 0) { ?><b><?= " * Path " . $value->error ?></b>
+                <?php } ?>
             <?php } else { ?>
                 <input type="text" name="path" value="<?= htmlentities($value->path) ?>"/>
             <?php } ?>
@@ -34,8 +35,9 @@ if (!$res) {
     <p>
         <label>Slug:<br>
             <?php if (isset($value->error)) { ?>
-                <input type="text" name="slug" value="<?= htmlentities($value->slug) ?>"/><?php if ($value->slugCheck > 0) { ?><b><?= " * Slug " . $value->error ?></b>
-                                                        <?php } ?>
+                <input type="text" name="slug" value="<?= htmlentities($value->slug) ?>"/>
+                <?php if ($value->slugCheck > 0) { ?><b><?= " * Slug " . $value->error ?></b>
+                <?php } ?>
             <?php } else { ?>
                 <input type="text" name="slug" value="<?= htmlentities($value->slug) ?>"/>
             <?php } ?>

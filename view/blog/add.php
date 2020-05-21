@@ -23,8 +23,9 @@ namespace Anax\View;
     <p>
         <label>Path:<br>
             <?php if (isset($error)) { ?>
-                <input type="text" name="path" value="<?= $path ?>"/><?php if ($pathCheck > 0) { ?><b><?= " *  Path " . $error ?></b>
-                                                        <?php } ?>
+                <input type="text" name="path" value="<?= $path ?>"/>
+                <?php if ($pathCheck > 0) { ?><b><?= " *  Path " . $error ?></b>
+                <?php } ?>
             <?php } else { ?>
                 <input type="text" name="path"/>
             <?php } ?>
@@ -33,8 +34,9 @@ namespace Anax\View;
     <p>
         <label>Slug:<br>
             <?php if (isset($error)) { ?>
-                <input type="text" name="slug" value="<?= $slug ?>"/><?php if ($slugCheck > 0) { ?><b><?= " *  Slug " . $error ?></b>
-                                                        <?php } ?>
+                <input type="text" name="slug" value="<?= $slug ?>"/>
+                <?php if ($slugCheck > 0) { ?><b><?= " *  Slug " . $error ?></b>
+                <?php } ?>
             <?php } else { ?>
                 <input type="text" name="slug"/>
             <?php } ?>

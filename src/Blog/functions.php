@@ -13,7 +13,7 @@ namespace Roju19\Blog;
  */
 function filtersText($text, $filterType)
 {
-    $filter = new \Roju19\Textfilter\MyTextFilter();
+    $filter = new \Roju19\TextFilter\MyTextFilter();
     $myTextFilter = explode(",", $filterType);
     $text = $filter->parse($text, $myTextFilter);
     return $text;

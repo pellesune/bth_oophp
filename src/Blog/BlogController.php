@@ -2,7 +2,7 @@
 
 namespace Roju19\Blog;
 
-require "functions.php";
+require "Functions.php";
 
 use Anax\Commons\AppInjectableInterface;
 use Anax\Commons\AppInjectableTrait;
